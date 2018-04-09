@@ -16,5 +16,6 @@
       "dom"
     ],
      "types": [ "firebase" ]
-  }
+  },
+  "include": ["node_modules/angular-bootstrap-md/**/*.ts",  "src/**/*.ts"]
 }
