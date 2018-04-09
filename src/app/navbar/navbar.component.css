@@ -1,7 +1,19 @@
+.well {
+  background-color: white;
+  font-size: 17px;
+  text-align: right;
+}
+
 .navbar1{
-  display: flex;
   width: 100%;
   border-bottom: 2px black solid;
   font-family: 'Oswald', sans-serif;
   color: black;
+  align-items: right;
+  font-family: 'Dosis', sans-serif;
+}
+
+ul {
+  font-size: 17px;
+  list-style: none;
 }
