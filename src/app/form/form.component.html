@@ -1,3 +1,7 @@
-<p>
-  form works!
-</p>
+<h2>Form</h2>
+
+<div *ngFor="let data of data | async" class="panel panel-default">
+  <div class="panel-body">
+    <h3><em>{{data.price}}</em></h3>
+  </div>
+</div>

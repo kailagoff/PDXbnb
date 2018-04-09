@@ -1,15 +1,17 @@
 import { Injectable } from '@angular/core';
 import { Data } from './data.model';
-import { DATA } from './mock-data';
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+
 
 @Injectable()
 export class DataService {
+  data: FirebaseListObservable<any[]>;
 
-  constructor() { }
+  constructor(private database: AngularFireDatabase) {
+    this.data = database.list('data');
+   }
 
-  getData() {
-   return DATA;
+  getData(){
+    return this.data;
  }
-
-
 }
