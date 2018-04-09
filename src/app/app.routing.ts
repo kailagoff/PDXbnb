@@ -10,11 +10,11 @@ const appRoutes: Routes = [
     component: HomeComponent
   },
   {
-    path: '',
+    path: 'about',
     component: AboutComponent
   },
   {
-    path: '',
+    path: 'form',
     component: FormComponent
   }
 ];
