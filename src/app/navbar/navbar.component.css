@@ -1,18 +1,21 @@
-.well {
-  padding-top: 20px;
-  background-color: white;
-  font-size: 17px;
-  text-align: right;
-  font-family: 'Oswald', sans-serif;
+.view {
+    background: url("https://mdbootstrap.com/img/Photos/Others/img (51).jpg")no-repeat center center;
+    background-size: cover;
+}
+@media (min-width: 768px) {
+    .view {
+        overflow: visible;
+        margin-top: -56px;
+    }
+}
+.navbar {
+    z-index: 1;
 }
 
-.navbar1{
-  padding-right: 20px;
-  width: 100%;
-  border-bottom: 2px black solid;
-  color: black;
-  align-items: left;
+.container {
   font-family: 'Dosis', sans-serif;
+  border-bottom: 2px black solid;
+  color: white;
 }
 
 ul {
@@ -21,8 +24,7 @@ ul {
 }
 
 h4 {
-  text-align: left;
-  padding-left: 20px;
+  padding-right: 1220px;
   font-size: 30px;
   color: deeppink;
   letter-spacing: 2px;
