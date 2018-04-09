@@ -1,16 +1,23 @@
 <div class="well">
-    <nav class="navbar1">
-      <a routerLink="">Home</a> |
-      <a routerLink="about">About</a> |
-      <a routerLink="form">Form</a> |
-      <ul class="nav navbar-nav navbar-right">
-        <li *ngIf="isLoggedIn">
-          <a>{{userName}}</a>
-          <a (click)="logout()">Log out</a>
-        </li>
-        <li *ngIf ="!isLoggedIn">
-          <a (click)="login()">Log in</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
+  <nav class="navbar1">
+    <div class="row">
+      <div class="col-md-8">
+        <h4>PDXbnb</h4>
+      </div>
+      <div class="col-md-4">
+        <a routerLink="">Home</a> |
+        <a routerLink="about">About</a> |
+        <a routerLink="form">Form</a> |
+        <ul class="nav navbar-nav navbar-right">
+          <li *ngIf="isLoggedIn">
+            <a>{{userName}}</a>
+            <a (click)="logout()">Log out</a>
+          </li>
+          <li *ngIf ="!isLoggedIn">
+            <a (click)="login()">Log in</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>

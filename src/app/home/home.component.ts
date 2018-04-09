@@ -12,7 +12,7 @@ export class HomeComponent {
   var currentImageIndex = -1,
           maxImageIndex = 0,
           images = [],
-          changeInterval = 2500;
+          changeInterval = 3500;
 
       // Prepares relevant variables to cycle throguh images
       var setUp = function() {
