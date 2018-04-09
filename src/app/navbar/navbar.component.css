@@ -1,0 +1,7 @@
+.navbar1{
+  display: flex;
+  width: 100%;
+  border-bottom: 2px black solid;
+  font-family: 'Oswald', sans-serif;
+  color: black;
+}

@@ -1,7 +1,39 @@
 <h2>Form</h2>
 
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">PDXbnb</h3>
+  </div>
+  <div class="panel-body">
+    <div>
+      <div>
+        <label>Enter your budget:</label>
+        <br>
+        <input #newBudget>
+      </div>
+
+      <div>
+        <label>What Month are you visiting?</label>
+        <br>
+        <input #newMonth>
+      </div>
+
+      <div>
+        <label>How many nights?:</label>
+        <br>
+        <input #newNight>
+      </div>
+
+      <br>
+      <button (click)="submitForm(newBudget.value, newMonth.value, newNight.value); newBudget.value=''; newMonth.value=''; newNight.value='';" class="btn btn-dark">Submit</button>
+    </div>
+  </div>
+</div>
+
+
+<p>data info</p>
 <div *ngFor="let data of data | async" class="panel panel-default">
   <div class="panel-body">
-    <h3><em>{{data.price}}</em></h3>
+    <h3>{{data.price}}</h3>
   </div>
 </div>
