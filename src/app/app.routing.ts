@@ -12,7 +12,7 @@ const appRoutes: Routes = [
   },
   {
     path: 'about',
-    component: AboutComponent
+    component: ChartComponent
   },
   {
     path: 'form',

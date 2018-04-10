@@ -52,9 +52,9 @@ export class ChartComponent  {
   public neBarChartLegend:boolean = true;
 
   public neBarChartData:any[] = [
-    {data: [65, 59, 80, 81, 56, 55, 40, 23, 32], label: 'Entire Room/Apt', backgroundColor:["#44E5E7", "#44E5E7", "#44E5E7", "#44E5E7", "#44E5E7", "#44E5E7", "#44E5E7", "#44E5E7", "#44E5E7"]},
-    {data: [28, 48, 40, 19, 86, 27, 90, 23, 32], label: 'Private Room', backgroundColor:["#59D2FE", "#59D2FE", "#59D2FE", "#59D2FE", "#59D2FE", "#59D2FE", "#59D2FE", "#59D2FE", "#59D2FE"]},
-    {data: [28, 48, 40, 19, 86, 27, 90, 23, 32], label: 'Shared Room', backgroundColor:["#A1FCDF", "#A1FCDF", "#A1FCDF", "#A1FCDF", "#A1FCDF", "#A1FCDF", "#A1FCDF", "#A1FCDF", "#A1FCDF"]}
+    {data: [65, 59, 80, 81, 56, 55, 40, 23, 32], label: 'Entire Room/Apt', backgroundColor:["#E1B07E", "#E1B07E", "#E1B07E", "#E1B07E", "#E1B07E", "#E1B07E", "#E1B07E", "#E1B07E", "#E1B07E"]},
+    {data: [28, 48, 40, 19, 86, 27, 90, 23, 32], label: 'Private Room', backgroundColor:["#E5BE9E", "#E5BE9E", "#E5BE9E", "#E5BE9E", "#E5BE9E", "#E5BE9E", "#E5BE9E", "#E5BE9E", "#E5BE9E"]},
+    {data: [28, 48, 40, 19, 86, 27, 90, 23, 32], label: 'Shared Room', backgroundColor:["#CBC0AD", "#CBC0AD", "#CBC0AD", "#CBC0AD", "#CBC0AD", "#CBC0AD", "#CBC0AD", "#CBC0AD", "#CBC0AD"]}
   ];
 
   //nportland bar chart
@@ -107,4 +107,21 @@ export class ChartComponent  {
     {data: [28, 48, 40, 19, 86, 27, 90, 23, 32], label: 'Private Room', backgroundColor:["#E78F8E", "#E78F8E", "#E78F8E", "#E78F8E", "#E78F8E", "#E78F8E", "#E78F8E", "#E78F8E", "#E78F8E"]},
     {data: [28, 48, 40, 19, 86, 27, 90, 23, 32], label: 'Shared Room', backgroundColor:["#FFE6E8", "#FFE6E8", "#FFE6E8", "#FFE6E8", "#FFE6E8", "#FFE6E8", "#FFE6E8", "#FFE6E8", "#FFE6E8"]}
   ];
+
+  //price by quadrant
+  public lineChartData:Array<any> = [
+    {data: [52, 159, 80, 181, 152, 52, 159, 80, 181, 152, 123], label: 'North'},
+    {data: [42, 67, 45, 104, 143, 34, 56, 74, 123, 89, 42], label: 'Northwest'},
+    {data: [34, 56, 74, 123, 89, 42, 67, 45, 104, 143, 123], label: 'Southwest'},
+    {data: [89, 85, 104, 123, 98, 67, 45, 104, 143, 123], label: 'Southeast'},
+    {data: [98, 123, 159, 95, 101, 89, 85, 104, 123, 98, 123], label: 'Northeast'}
+  ];
+  public lineChartLabels:Array<any> = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November'];
+  public lineChartOptions:any = {
+    responsive: true
+  };
+  public lineChartColors:Array<any> = [  ];
+  public lineChartLegend:boolean = true;
+  public lineChartType:string = 'line';
+
 }

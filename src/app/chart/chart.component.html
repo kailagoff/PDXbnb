@@ -9,32 +9,71 @@
               (chartClick)="chartClicked($event)"></canvas>
 </div>
 <br>
-<div class="container" id="se-bar-chart">
-  <p><strong>Average Room Price by Neighborhood</strong></p>
-  <p>Southeast</p>
-    <canvas baseChart
-            [datasets]="barChartData"
-            [labels]="barChartLabels"
-            [colors]="barChartColors"
-            [options]="barChartOptions"
-            [legend]="barChartLegend"
-            [chartType]="barChartType"
-            (chartHover)="chartHovered($event)"
-            (chartClick)="chartClicked($event)"></canvas>
-</div>
+<div class="row">
+  <div class="col-lg-6">
+    <div class="container" id="se-bar-chart">
+      <p><strong>Average Room Price by Neighborhood</strong></p>
+      <p>Southeast</p>
+        <canvas baseChart
+                [datasets]="barChartData"
+                [labels]="barChartLabels"
+                [colors]="barChartColors"
+                [options]="barChartOptions"
+                [legend]="barChartLegend"
+                [chartType]="barChartType"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)"></canvas>
+    </div>
+  </div>
 <br>
-<div class="container" id="ne-bar-chart">
-  <p><strong>Average Room Price by Neighborhood</strong></p>
-  <p>Northeast</p>
-    <canvas baseChart
-            [datasets]="neBarChartData"
-            [labels]="neBarChartLabels"
-            [colors]="neBarChartColors"
-            [options]="neBarChartOptions"
-            [legend]="neBarChartLegend"
-            [chartType]="neBarChartType"
-            (chartHover)="chartHovered($event)"
-            (chartClick)="chartClicked($event)"></canvas>
+  <div class="col-lg-6">
+    <div class="container" id="ne-bar-chart">
+      <p><strong>Average Room Price by Neighborhood</strong></p>
+      <p>Northeast</p>
+        <canvas baseChart
+                [datasets]="neBarChartData"
+                [labels]="neBarChartLabels"
+                [colors]="neBarChartColors"
+                [options]="neBarChartOptions"
+                [legend]="neBarChartLegend"
+                [chartType]="neBarChartType"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)"></canvas>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="container" id="sw-bar-chart">
+      <p><strong>Average Room Price by Neighborhood</strong></p>
+      <p>Southwest</p>
+        <canvas baseChart
+                [datasets]="swBarChartData"
+                [labels]="swBarChartLabels"
+                [colors]="swBarChartColors"
+                [options]="swBarChartOptions"
+                [legend]="swBarChartLegend"
+                [chartType]="swBarChartType"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)"></canvas>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="container" id="nw-bar-chart">
+      <p><strong>Average Room Price by Neighborhood</strong></p>
+      <p>Northwest</p>
+        <canvas baseChart
+                [datasets]="nwBarChartData"
+                [labels]="nwBarChartLabels"
+                [colors]="nwBarChartColors"
+                [options]="nwBarChartOptions"
+                [legend]="nwBarChartLegend"
+                [chartType]="nwBarChartType"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)"></canvas>
+    </div>
+  </div>
 </div>
 
 <div class="container" id="n-bar-chart">
@@ -51,30 +90,14 @@
             (chartClick)="chartClicked($event)"></canvas>
 </div>
 
-<div class="container" id="sw-bar-chart">
-  <p><strong>Average Room Price by Neighborhood</strong></p>
-  <p>Southwest</p>
-    <canvas baseChart
-            [datasets]="swBarChartData"
-            [labels]="swBarChartLabels"
-            [colors]="swBarChartColors"
-            [options]="swBarChartOptions"
-            [legend]="swBarChartLegend"
-            [chartType]="swBarChartType"
-            (chartHover)="chartHovered($event)"
-            (chartClick)="chartClicked($event)"></canvas>
-</div>
-
-<div class="container" id="nw-bar-chart">
-  <p><strong>Average Room Price by Neighborhood</strong></p>
-  <p>Northwest</p>
-    <canvas baseChart
-            [datasets]="nwBarChartData"
-            [labels]="nwBarChartLabels"
-            [colors]="nwBarChartColors"
-            [options]="nwBarChartOptions"
-            [legend]="nwBarChartLegend"
-            [chartType]="nwBarChartType"
-            (chartHover)="chartHovered($event)"
-            (chartClick)="chartClicked($event)"></canvas>
-</div>
+<div class="container" id="line-graph">
+  <canvas baseChart width="400" height="400"
+              [datasets]="lineChartData"
+              [labels]="lineChartLabels"
+              [options]="lineChartOptions"
+              [colors]="lineChartColors"
+              [legend]="lineChartLegend"
+              [chartType]="lineChartType"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)"></canvas>
+  </div>
