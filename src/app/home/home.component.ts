@@ -39,4 +39,5 @@ export class HomeComponent implements OnInit {
 
     setInterval(changeBanner, changeInterval); // following a delay, keep changing the banner image by the specified interval
   }
+
 }

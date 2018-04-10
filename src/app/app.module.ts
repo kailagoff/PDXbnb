@@ -4,6 +4,7 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { routing } from './app.routing';
 import { HttpModule } from '@angular/http';
 import { FormsModule }  from '@angular/forms';
+import { ChartsModule } from 'ng2-charts';
 
 
 import { AppComponent } from './app.component';
@@ -17,6 +18,7 @@ import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { ChartComponent } from './chart/chart.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -33,7 +35,8 @@ export const firebaseConfig = {
     FormComponent,
     HomeComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    ChartComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,8 @@ export const firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
-    MDBBootstrapModule.forRoot()
+    MDBBootstrapModule.forRoot(),
+    ChartsModule
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
   providers: [],

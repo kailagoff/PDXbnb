@@ -1,0 +1,10 @@
+
+<div id="pieChart">
+  <p>Average Room Price by Room Type</p>
+  <canvas baseChart
+              [data]="doughnutChartData"
+              [labels]="doughnutChartLabels"
+              [chartType]="doughnutChartType"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)"></canvas>
+</div>
