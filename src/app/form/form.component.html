@@ -1,15 +1,6 @@
 <div class="container">
   <h1>Form</h1>
-  ** this could be a header ** Looking to travel to Portland?
-  Know what the going rates are for homes where you’re looking, so you get the best deal in the neighborhood of your choice. Search by size of home and neighborhood.
-
-  ** these could be a header ** Looking to list your Portland property on Airbnb?
-  Find out the going rates in your neighborhood according to average number of bedrooms, average number of people accommodated, and average rates in your neighborhood, so you’re set up for success right away.
-
-
   <div class="panel panel-default">
-    <div class="panel-heading">
-      <h3 class="panel-title">PDXbnb</h3>
     </div>
     <div class="panel-body">
       <div>
@@ -37,12 +28,11 @@
     </div>
   </div>
 
-
-  <p>data info</p>
+<div class="container">
+  <p>Data Info</p>
   <div *ngFor="let data of data | async" class="panel panel-default">
     <div class="panel-body">
       <h3>{{data.neighborhood}}</h3>
     </div>
   </div>
-
 </div>
