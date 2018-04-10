@@ -64,3 +64,17 @@
             (chartHover)="chartHovered($event)"
             (chartClick)="chartClicked($event)"></canvas>
 </div>
+
+<div class="container" id="nw-bar-chart">
+  <p><strong>Average Room Price by Neighborhood</strong></p>
+  <p>Northwest</p>
+    <canvas baseChart
+            [datasets]="nwBarChartData"
+            [labels]="nwBarChartLabels"
+            [colors]="nwBarChartColors"
+            [options]="nwBarChartOptions"
+            [legend]="nwBarChartLegend"
+            [chartType]="nwBarChartType"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)"></canvas>
+</div>
