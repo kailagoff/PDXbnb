@@ -3,7 +3,7 @@
   flex: 0 0 50px;
   bottom: 0;
   color: #707070;
-  position: static;
+  position: absolute;
   font-size: small;
   padding-left: 50px;
 }
