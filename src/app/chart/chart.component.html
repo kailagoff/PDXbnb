@@ -22,3 +22,45 @@
             (chartHover)="chartHovered($event)"
             (chartClick)="chartClicked($event)"></canvas>
 </div>
+<br>
+<div class="container" id="ne-bar-chart">
+  <p><strong>Average Room Price by Neighborhood</strong></p>
+  <p>Northeast</p>
+    <canvas baseChart
+            [datasets]="neBarChartData"
+            [labels]="neBarChartLabels"
+            [colors]="neBarChartColors"
+            [options]="neBarChartOptions"
+            [legend]="neBarChartLegend"
+            [chartType]="neBarChartType"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)"></canvas>
+</div>
+
+<div class="container" id="n-bar-chart">
+  <p><strong>Average Room Price by Neighborhood</strong></p>
+  <p>North Portland</p>
+    <canvas baseChart
+            [datasets]="nBarChartData"
+            [labels]="nBarChartLabels"
+            [colors]="nBarChartColors"
+            [options]="nBarChartOptions"
+            [legend]="nBarChartLegend"
+            [chartType]="nBarChartType"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)"></canvas>
+</div>
+
+<div class="container" id="sw-bar-chart">
+  <p><strong>Average Room Price by Neighborhood</strong></p>
+  <p>Southwest</p>
+    <canvas baseChart
+            [datasets]="swBarChartData"
+            [labels]="swBarChartLabels"
+            [colors]="swBarChartColors"
+            [options]="swBarChartOptions"
+            [legend]="swBarChartLegend"
+            [chartType]="swBarChartType"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)"></canvas>
+</div>
