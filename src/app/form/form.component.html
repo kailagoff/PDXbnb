@@ -3,36 +3,39 @@
   <div class="panel panel-default">
     </div>
     <div class="panel-body">
-      <div>
-        <div>
-          <label>Enter your budget:</label>
-          <br>
-          <input #newBudget>
+      <form>
+        <div class="row">
+          <div class="col">
+            <div class="md-form mt-0">
+              <label>Enter your budget:</label>
+              <br>
+              <input #newBudget type="number" placeholder="$" class="form-control">
+            </div>
+          </div>
+
+          <div class="col" id="select">
+            <label id="selectLabel" for="">Select a month:</label>
+            <div class="md-form mt-0">
+              <select class="form-control" #newMonth>
+                <option>January</option>
+                <option>February</option>
+                <option>March</option>
+                <option>April</option>
+                <option>May</option>
+                <option>June</option>
+                <option>July</option>
+                <option>August</option>
+                <option>September</option>
+                <option>October</option>
+                <option>November</option>
+                <option>December</option>
+              </select>
+            </div>
+          </div>
         </div>
 
-        <div>
-          <label>What Month are you visiting?</label>
           <br>
-          <input #newMonth>
-        </div>
-
-        <div>
-          <label>How many nights?:</label>
-          <br>
-          <input #newNight>
-        </div>
-
-        <br>
-        <button (click)="submitForm(newBudget.value, newMonth.value, newNight.value); newBudget.value=''; newMonth.value=''; newNight.value='';"  class="btn btn-pink" >Submit</button>
-      </div>
+          <button (click)="submitForm(newBudget.value, newMonth.value); newBudget.value=''; newMonth.value='';"  class="btn btn-pink" >Submit</button>
+      </form>
     </div>
   </div>
-
-<div class="container">
-  <p>Data Info</p>
-  <div *ngFor="let data of data | async" class="panel panel-default">
-    <div class="panel-body">
-      <h3>{{data.neighborhood}}</h3>
-    </div>
-  </div>
-</div>

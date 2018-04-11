@@ -1,3 +1,17 @@
 .btn {
   border-radius: 17px;
 }
+
+label {
+  color: #757575;
+  position: relative;
+  bottom: -3px;
+}
+
+#select {
+  margin-top: 10px;
+}
+
+#selectLabel {
+  margin-bottom: 12px;
+}

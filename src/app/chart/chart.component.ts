@@ -1,15 +1,33 @@
 import { ViewChild, Component, ElementRef, OnInit } from '@angular/core';
 import { Chart } from 'chart.js';
 import { Router } from '@angular/router';
+import { DataService } from '../data.service';
+import { FirebaseListObservable } from 'angularfire2/database';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 
 @Component({
   selector: 'app-chart',
   templateUrl: './chart.component.html',
   // template: '<canvas #donut></canvas>',
-  styleUrls: ['./chart.component.scss']
+  styleUrls: ['./chart.component.scss'],
+  providers: [DataService]
 })
 
-export class ChartComponent  {
+export class ChartComponent implements OnInit {
+  data: FirebaseListObservable<any[]>;
+  hood: string;
+  hoodToDisplay;
+
+  constructor(private router: Router, private dataService: DataService) { }
+
+  ngOnInit() {
+    this.dataService.getData().subscribe(dataLastEmittedFromObserver => {
+      this.hoodToDisplay = dataLastEmittedFromObserver;
+
+      console.log(this.hoodToDisplay);
+    })
+  }
   // Doughnut
   public doughnutChartLabels:string[] = ['Entire Home/Apt', 'Shared Room', 'Private Room'];
   public doughnutChartData:number[] = [128.86, 64.37, 109.89];
@@ -39,7 +57,6 @@ export class ChartComponent  {
     {data: [28, 48, 40, 19, 86, 27, 90, 23, 32], label: 'Private Room', backgroundColor:["#BFD0E0", "#BFD0E0", "#BFD0E0", "#BFD0E0", "#BFD0E0", "#BFD0E0", "#BFD0E0", "#BFD0E0", "#BFD0E0"]},
     {data: [28, 48, 40, 19, 86, 27, 90, 23, 32], label: 'Shared Room', backgroundColor:["#C9F9FF", "#C9F9FF", "#C9F9FF", "#C9F9FF", "#C9F9FF", "#C9F9FF", "#C9F9FF", "#C9F9FF", "#C9F9FF"]}
   ];
-
   //ne bar chart
   public neBarChartOptions:any = {
     scaleShowVerticalLines: false,
@@ -123,5 +140,4 @@ export class ChartComponent  {
   public lineChartColors:Array<any> = [  ];
   public lineChartLegend:boolean = true;
   public lineChartType:string = 'line';
-
 }
