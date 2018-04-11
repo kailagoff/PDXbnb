@@ -107,22 +107,22 @@ export class ChartComponent implements OnInit {
     scaleShowVerticalLines: false,
     responsive: true
   };
-  public nwBarChartLabels:string[] = ['Linnton', 'Forest Park', 'Pearl', 'Chinatown-Old Town'];
+  public nwBarChartLabels:string[] = ['Linnton', 'Forest Park', 'Pearl', 'Chinatown-Old Town', 'Northwest'];
   public nwBarChartType:string = 'bar';
 
   public nwBarChartColors: Array<any> = [{}];
   public nwBarChartLegend:boolean = true;
 
   public nwBarChartData:any[] = [
-    {data: [116, 217, 196, 114], label: 'Entire Room/Apt', backgroundColor:["#F2CCC3", "#F2CCC3", "#F2CCC3", "#F2CCC3", "#F2CCC3", "#F2CCC3", "#F2CCC3", "#F2CCC3", "#F2CCC3"]},
-    {data: [77, 103, 123, 111], label: 'Private Room', backgroundColor:["#E78F8E", "#E78F8E", "#E78F8E", "#E78F8E", "#E78F8E", "#E78F8E", "#E78F8E", "#E78F8E", "#E78F8E"]},
-    {data: [0, 0, 54, 43], label: 'Shared Room', backgroundColor:["#FFE6E8", "#FFE6E8", "#FFE6E8", "#FFE6E8", "#FFE6E8", "#FFE6E8", "#FFE6E8", "#FFE6E8", "#FFE6E8"]}
+    {data: [116, 217, 196, 114, 155], label: 'Entire Room/Apt', backgroundColor:["#F2CCC3", "#F2CCC3", "#F2CCC3", "#F2CCC3", "#F2CCC3", "#F2CCC3", "#F2CCC3", "#F2CCC3", "#F2CCC3"]},
+    {data: [77, 103, 123, 111, 83], label: 'Private Room', backgroundColor:["#E78F8E", "#E78F8E", "#E78F8E", "#E78F8E", "#E78F8E", "#E78F8E", "#E78F8E", "#E78F8E", "#E78F8E"]},
+    {data: [0, 0, 54, 43, 37], label: 'Shared Room', backgroundColor:["#FFE6E8", "#FFE6E8", "#FFE6E8", "#FFE6E8", "#FFE6E8", "#FFE6E8", "#FFE6E8", "#FFE6E8", "#FFE6E8"]}
   ];
 
   //price by quadrant
   public lineChartData:Array<any> = [
     {data: [86, 92, 91, 91, 91, 90, 82, 86, 90, 90, 90, 95], label: 'North'},
-    {data: [134, 136, 133, 139, 134, 120, 121, 113, 117, 117, 142, 127], label: 'Northwest'},
+    {data: [130, 130, 127, 130, 127, 115, 114, 109, 112, 114, 133, 121], label: 'Northwest'},
     {data: [104, 104, 106, 122, 124, 100, 95, 96, 107, 111, 109, 114], label: 'Southwest'},
     {data: [96, 96, 92, 90, 96, 89, 88, 89, 93, 95, 96, 97], label: 'Southeast'},
     {data: [98, 101, 107, 104, 98, 89, 85, 86, 87, 87, 92, 90], label: 'Northeast'}
