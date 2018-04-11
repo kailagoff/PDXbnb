@@ -38,15 +38,19 @@ export class FormComponent implements OnInit {
       if (month == 'January') {
         let month =[];
         month = this.hoodToDisplay[5];
+        //mapping the
         let arrNH = Object.entries(month).map(entry => Object.assign({value: entry[1]}, { key: entry[0] }));
+
         for(var j = 0; j < arrNH.length; j++) {
-          let arrRT = Object.entries(arrNH[0].value).map(entry => Object.assign({value: entry[1]}, { key: entry[0] }));
+          let arrRT = Object.entries(arrNH[j].value).map(entry => Object.assign({value: entry[1]}, { key: entry[0] }));
           for (var l = 0; l < arrRT.length; l++) {
             if((arrRT[l].value.avgPrice <= budget) && (arrRT[l].key !== 'Total')) {
               this.result.push([arrNH[j].key, arrRT[l].key, arrRT[l].value.avgPrice]);
+              console.log(arrRT[l].value.avgPrice);
             }
           }
         }
+
         console.log(this.result);
       }
       if (month == 'February') {
