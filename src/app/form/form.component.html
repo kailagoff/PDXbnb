@@ -1,13 +1,4 @@
 <div class="container">
-  <p>Data Info</p>
-  <div *ngFor="let hood of hoodToDisplay" class="panel panel-default">
-    <div class="panel-body">
-      <h3>{{hood.$key}} average price: {{hood.Total.avgPrice}}</h3>
-    </div>
-  </div>
-</div>
-
-<div class="container">
   <h1>Form</h1>
   <div class="panel panel-default">
     </div>
@@ -37,14 +28,25 @@
                 <option>September</option>
                 <option>October</option>
                 <option>November</option>
-                <option>December</option>
               </select>
             </div>
           </div>
         </div>
-
+        <p>We are currently lacking data for the month of December, hence why it is missing from the menu. :)</p>
           <br>
-          <button (click)="submitForm(newBudget.value, newMonth.value); newBudget.value=''; newMonth.value='';"  class="btn btn-pink" >Submit</button>
+          <button (click)="submitFormOne(newBudget.value, newMonth.value); newBudget.value='';"  class="btn btn-pink" >Submit</button>
       </form>
     </div>
+  </div>
+
+  <div class="container">
+    <p>Data Info</p>
+    <div *ngIf="error !== ''" class="panel panel-default">
+      <div class="panel-body">
+        <p>{{error}}</p>
+      </div>
+    </div>
+      <div *ngIf="result !== null" class="panel panel-default panel-body">
+        <p>{{result}}</p>
+      </div>
   </div>
