@@ -9,8 +9,7 @@ export class DataService {
   data: FirebaseListObservable<any[]>;
 
   constructor(private database: AngularFireDatabase) {
-    this.data = database.list("2016-09");
-    console.log(this.data);
+    this.data = database.list("data");
    }
 
   getData(){
