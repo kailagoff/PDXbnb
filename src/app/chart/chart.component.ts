@@ -24,7 +24,7 @@ export class ChartComponent implements OnInit {
   }
   // Doughnut
   public doughnutChartLabels:string[] = ['Entire Home/Apt', 'Private Room', 'Shared Room'];
-  public doughnutChartData:number[] = [128.86, 64.37, 109.89];
+  public doughnutChartData:number[] = [129, 64, 41];
   public doughnutChartType:string = 'doughnut';
   public doughnutChartColors: Array<any> = [
     {
@@ -40,32 +40,32 @@ export class ChartComponent implements OnInit {
     scaleShowVerticalLines: false,
     responsive: true
   };
-  public barChartLabels:string[] = ['Montavilla', 'Richmond', 'Foster-Powell', 'Brooklyn', 'Woodstock', 'Mt. Tabor', 'Buckman', 'Sellwood-Moreland'];
+  public barChartLabels:string[] = ['Brooklyn', 'Buckman', 'Hosford', 'Kerns', 'Mt. Tabor'];
   public barChartType:string = 'bar';
 
   public barChartColors: Array<any> = [{}];
   public barChartLegend:boolean = true;
 
   public barChartData:any[] = [
-    {data: [119, 126, 103, 120, 134, 141, 156, 181], label: 'Entire Room/Apt', backgroundColor:["#90D7FF", "#90D7FF", "#90D7FF", "#90D7FF", "#90D7FF", "#90D7FF", "#90D7FF", "#90D7FF", "#90D7FF"]},
-    {data: [57, 62, 57, 61, 62, 65, 72, 60], label: 'Private Room', backgroundColor:["#BFD0E0", "#BFD0E0", "#BFD0E0", "#BFD0E0", "#BFD0E0", "#BFD0E0", "#BFD0E0", "#BFD0E0", "#BFD0E0"]},
-    {data: [31, 36, 0, 27, 0, 0, 69, 33], label: 'Shared Room', backgroundColor:["#C9F9FF", "#C9F9FF", "#C9F9FF", "#C9F9FF", "#C9F9FF", "#C9F9FF", "#C9F9FF", "#C9F9FF", "#C9F9FF"]}
+    {data: [120, 156, 143, 139, 141], label: 'Entire Room/Apt', backgroundColor:["#90D7FF", "#90D7FF", "#90D7FF", "#90D7FF", "#90D7FF", "#90D7FF", "#90D7FF", "#90D7FF", "#90D7FF"]},
+    {data: [61, 72, 70, 71, 65], label: 'Private Room', backgroundColor:["#BFD0E0", "#BFD0E0", "#BFD0E0", "#BFD0E0", "#BFD0E0", "#BFD0E0", "#BFD0E0", "#BFD0E0", "#BFD0E0"]},
+    {data: [27, 43, 25, 0, 0], label: 'Shared Room', backgroundColor:["#C9F9FF", "#C9F9FF", "#C9F9FF", "#C9F9FF", "#C9F9FF", "#C9F9FF", "#C9F9FF", "#C9F9FF", "#C9F9FF"]}
   ];
   //ne bar chart
   public neBarChartOptions:any = {
     scaleShowVerticalLines: false,
     responsive: true
   };
-  public neBarChartLabels:string[] = ['Lloyd', 'Irvington', 'Roseway', 'Eliot', 'Cully', 'Woodlawn'];
+  public neBarChartLabels:string[] = ['Cully', 'Eliot', 'Irvington', 'Lloyd', 'Roseway', 'Woodlawn'];
   public neBarChartType:string = 'bar';
 
   public neBarChartColors: Array<any> = [{}];
   public neBarChartLegend:boolean = true;
 
   public neBarChartData:any[] = [
-    {data: [144, 129, 126, 129, 117, 124 ], label: 'Entire Room/Apt', backgroundColor:["#E1B07E", "#E1B07E", "#E1B07E", "#E1B07E", "#E1B07E", "#E1B07E", "#E1B07E", "#E1B07E", "#E1B07E"]},
-    {data: [47, 85, 62, 79, 56, 55 ], label: 'Private Room', backgroundColor:["#E5BE9E", "#E5BE9E", "#E5BE9E", "#E5BE9E", "#E5BE9E", "#E5BE9E", "#E5BE9E", "#E5BE9E", "#E5BE9E"]},
-    {data: [0, 37, 36, 0, 0, 0], label: 'Shared Room', backgroundColor:["#CBC0AD", "#CBC0AD", "#CBC0AD", "#CBC0AD", "#CBC0AD", "#CBC0AD", "#CBC0AD", "#CBC0AD", "#CBC0AD"]}
+    {data: [118, 129, 129, 144, 126, 124], label: 'Entire Room/Apt', backgroundColor:["#E1B07E", "#E1B07E", "#E1B07E", "#E1B07E", "#E1B07E", "#E1B07E", "#E1B07E", "#E1B07E", "#E1B07E"]},
+    {data: [55, 79, 85, 55, 62, 55], label: 'Private Room', backgroundColor:["#E5BE9E", "#E5BE9E", "#E5BE9E", "#E5BE9E", "#E5BE9E", "#E5BE9E", "#E5BE9E", "#E5BE9E", "#E5BE9E"]},
+    {data: [0, 0, 37, 0, 36], label: 'Shared Room', backgroundColor:["#CBC0AD", "#CBC0AD", "#CBC0AD", "#CBC0AD", "#CBC0AD", "#CBC0AD", "#CBC0AD", "#CBC0AD", "#CBC0AD"]}
   ];
 
   //nportland bar chart
@@ -73,16 +73,16 @@ export class ChartComponent implements OnInit {
     scaleShowVerticalLines: false,
     responsive: true
   };
-  public nBarChartLabels:string[] = ['Kenton', 'Cathederal Park', 'Arbor Lodge', 'Overlook', 'St. Johns', 'Portsmouth', 'Bridgeton'];
+  public nBarChartLabels:string[] = ['Arbor Lodge', 'Cathederal Park', 'Kenton', 'Overlook', 'St. Johns'];
   public nBarChartType:string = 'bar';
 
   public nBarChartColors: Array<any> = [{}];
   public nBarChartLegend:boolean = true;
 
   public nBarChartData:any[] = [
-    {data: [105, 111, 115, 132, 75, 107, 173], label: 'Entire Room/Apt', backgroundColor:["#476A6F", "#476A6F", "#476A6F", "#476A6F", "#476A6F", "#476A6F", "#476A6F", "#476A6F", "#476A6F"]},
-    {data: [55, 56, 62, 61, 49, 56, 93], label: 'Private Room', backgroundColor:["#519E8A", "#519E8A", "#519E8A", "#519E8A", "#519E8A", "#519E8A", "#519E8A", "#519E8A", "#519E8A"]},
-    {data: [0, 0, 0, 27, 0, 0, 0], label: 'Shared Room', backgroundColor:["#7EB09B", "#7EB09B", "#7EB09B", "#7EB09B", "#7EB09B", "#7EB09B", "#7EB09B", "#7EB09B", "#7EB09B"]}
+    {data: [115, 111, 105, 132, 75], label: 'Entire Room/Apt', backgroundColor:["#476A6F", "#476A6F", "#476A6F", "#476A6F", "#476A6F", "#476A6F", "#476A6F", "#476A6F", "#476A6F"]},
+    {data: [62, 56, 55, 61, 49], label: 'Private Room', backgroundColor:["#519E8A", "#519E8A", "#519E8A", "#519E8A", "#519E8A", "#519E8A", "#519E8A", "#519E8A", "#519E8A"]},
+    {data: [0, 0, 0, 27, 0], label: 'Shared Room', backgroundColor:["#7EB09B", "#7EB09B", "#7EB09B", "#7EB09B", "#7EB09B", "#7EB09B", "#7EB09B", "#7EB09B", "#7EB09B"]}
   ];
 
   //sw portland bar chart
@@ -90,16 +90,16 @@ export class ChartComponent implements OnInit {
     scaleShowVerticalLines: false,
     responsive: true
   };
-  public swBarChartLabels:string[] = ['Hillsdale', 'Hayhurst', 'Homestead', 'Downtown', 'Maplewood'];
+  public swBarChartLabels:string[] = ['Downtown', 'Hayhurst', 'Hillsdale', 'Homestead', 'Maplewood-Ashcreek'];
   public swBarChartType:string = 'bar';
 
   public swBarChartColors: Array<any> = [{}];
   public swBarChartLegend:boolean = true;
 
   public swBarChartData:any[] = [
-    {data: [151, 119, 124, 233, 142], label: 'Entire Room/Apt', backgroundColor:["#283044", "#283044", "#283044", "#283044", "#283044"]},
-    {data: [72, 64, 72, 77, 63], label: 'Private Room', backgroundColor:["#A9BCD0", "#A9BCD0", "#A9BCD0", "#A9BCD0", "#A9BCD0"]},
-    {data: [0, 0, 47, 45, 45], label: 'Shared Room', backgroundColor:["#78A1BB", "#78A1BB", "#78A1BB", "#78A1BB", "#78A1BB"]}
+    {data: [233, 119, 151, 124, 142], label: 'Entire Room/Apt', backgroundColor:["#283044", "#283044", "#283044", "#283044", "#283044"]},
+    {data: [77, 64, 72, 72, 63], label: 'Private Room', backgroundColor:["#A9BCD0", "#A9BCD0", "#A9BCD0", "#A9BCD0", "#A9BCD0"]},
+    {data: [43, 0, 0, 47, 45], label: 'Shared Room', backgroundColor:["#78A1BB", "#78A1BB", "#78A1BB", "#78A1BB", "#78A1BB"]}
   ];
 
   //nw portland bar chart
@@ -107,16 +107,16 @@ export class ChartComponent implements OnInit {
     scaleShowVerticalLines: false,
     responsive: true
   };
-  public nwBarChartLabels:string[] = ['Linnton', 'Forest Park', 'Pearl', 'Chinatown-Old Town', 'Northwest'];
+  public nwBarChartLabels:string[] = ['Forest Park', 'Linnton', 'Northwest', 'Old Town-Chinatown', 'Pearl District'];
   public nwBarChartType:string = 'bar';
 
   public nwBarChartColors: Array<any> = [{}];
   public nwBarChartLegend:boolean = true;
 
   public nwBarChartData:any[] = [
-    {data: [116, 217, 196, 114, 155], label: 'Entire Room/Apt', backgroundColor:["#F2CCC3", "#F2CCC3", "#F2CCC3", "#F2CCC3", "#F2CCC3", "#F2CCC3", "#F2CCC3", "#F2CCC3", "#F2CCC3"]},
-    {data: [77, 103, 123, 111, 83], label: 'Private Room', backgroundColor:["#E78F8E", "#E78F8E", "#E78F8E", "#E78F8E", "#E78F8E", "#E78F8E", "#E78F8E", "#E78F8E", "#E78F8E"]},
-    {data: [0, 0, 54, 43, 37], label: 'Shared Room', backgroundColor:["#FFE6E8", "#FFE6E8", "#FFE6E8", "#FFE6E8", "#FFE6E8", "#FFE6E8", "#FFE6E8", "#FFE6E8", "#FFE6E8"]}
+    {data: [217, 116, 115, 114, 196], label: 'Entire Room/Apt', backgroundColor:["#F2CCC3", "#F2CCC3", "#F2CCC3", "#F2CCC3", "#F2CCC3", "#F2CCC3", "#F2CCC3", "#F2CCC3", "#F2CCC3"]},
+    {data: [103, 77, 83, 111, 123], label: 'Private Room', backgroundColor:["#E78F8E", "#E78F8E", "#E78F8E", "#E78F8E", "#E78F8E", "#E78F8E", "#E78F8E", "#E78F8E", "#E78F8E"]},
+    {data: [0, 0, 43, 43, 0], label: 'Shared Room', backgroundColor:["#FFE6E8", "#FFE6E8", "#FFE6E8", "#FFE6E8", "#FFE6E8", "#FFE6E8", "#FFE6E8", "#FFE6E8", "#FFE6E8"]}
   ];
 
   //price by quadrant
