@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { DataService } from '../data.service';
 import { FirebaseListObservable } from 'angularfire2/database';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 
 
 @Component({
@@ -12,11 +14,16 @@ import { FirebaseListObservable } from 'angularfire2/database';
 })
 export class FormComponent implements OnInit {
   data: FirebaseListObservable<any[]>;
+  hood: string;
+  hoodToDisplay;
 
   constructor(private router: Router, private dataService: DataService) { }
 
   ngOnInit() {
-     this.data = this.dataService.getData();
-  }
+    this.dataService.getData().subscribe(dataLastEmittedFromObserver => {
+      this.hoodToDisplay = dataLastEmittedFromObserver;
 
+      console.log(this.hoodToDisplay);
+    })
+  }
 }

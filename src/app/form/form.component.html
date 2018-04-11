@@ -1,4 +1,13 @@
 <div class="container">
+  <p>Data Info</p>
+  <div *ngFor="let hood of hoodToDisplay" class="panel panel-default">
+    <div class="panel-body">
+      <h3>{{hood.$key}} average price: {{hood.Total.avgPrice}}</h3>
+    </div>
+  </div>
+</div>
+
+<div class="container">
   <h1>Form</h1>
   <div class="panel panel-default">
     </div>

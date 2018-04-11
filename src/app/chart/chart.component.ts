@@ -16,17 +16,11 @@ import { HttpModule } from '@angular/http';
 
 export class ChartComponent implements OnInit {
   data: FirebaseListObservable<any[]>;
-  hood: string;
-  hoodToDisplay;
+
 
   constructor(private router: Router, private dataService: DataService) { }
 
   ngOnInit() {
-    this.dataService.getData().subscribe(dataLastEmittedFromObserver => {
-      this.hoodToDisplay = dataLastEmittedFromObserver;
-
-      console.log(this.hoodToDisplay);
-    })
   }
   // Doughnut
   public doughnutChartLabels:string[] = ['Entire Home/Apt', 'Shared Room', 'Private Room'];
