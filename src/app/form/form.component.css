@@ -20,3 +20,7 @@ label {
 .selectLabel {
   margin-bottom: 12px;
 }
+
+.underline {
+  border-bottom: 2px;
+}

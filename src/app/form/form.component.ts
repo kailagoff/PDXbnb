@@ -31,7 +31,7 @@ export class FormComponent implements OnInit {
 
   submitForm(budget, month, room) {
     let num = 0;
-    if (budget === "") {
+    if ((budget === "") || (budget.includes("-"))) {
       this.show = false;
       this.error = "Please enter valid number for search";
     } else {
