@@ -40,4 +40,5 @@ export class HomeComponent {
     setInterval(changeBanner, changeInterval); // following a delay, keep changing the banner image by the specified interval
   }
 
+  public map: any = { lat: 45.5231, lng: -122.6765 };
 }

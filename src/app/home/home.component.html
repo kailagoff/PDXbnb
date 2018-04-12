@@ -50,4 +50,9 @@
   </div>
 
   </div>
+  <br>
+  <h4>Explore Portland's neighborhoods</h4>
+  <agm-map [zoom]="13" [latitude]="map.lat" [longitude]="map.lng" style="height: 400px">
+    <agm-marker [latitude]="map.lat" [longitude]="map.lng"></agm-marker>
+  </agm-map>
 </div>
