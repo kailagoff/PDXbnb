@@ -1,21 +1,26 @@
-.btn {
-  border-radius: 17px;
-}
-
 label {
   color: #757575;
   position: relative;
   bottom: -3px;
 }
 
-#select {
-  margin-top: 10px;
-}
-
-#selectLabel {
-  margin-bottom: 12px;
+.btn {
+  border-radius: 7px;
+  margin-left: 40px;
 }
 
 .margin {
   margin-top: 25px;
+}
+
+.select {
+  margin-top: 10px;
+}
+
+.selectLabel {
+  margin-bottom: 12px;
+}
+
+.underline {
+  border-bottom: 2px;
 }
