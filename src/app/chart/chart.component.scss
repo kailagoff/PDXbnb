@@ -18,8 +18,10 @@ p {
 }
 
 #line-graph {
-  padding-bottom: 30px;
-  padding-top: 10px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 h5 {
@@ -29,4 +31,12 @@ h5 {
 
 #footnote {
   padding-top: 10px;
+}
+
+canvas, #fontLegend {
+  font-size: 30px !important;
+}
+
+.clickColor {
+  color: deeppink;
 }

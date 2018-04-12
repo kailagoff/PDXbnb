@@ -1,6 +1,6 @@
 <div class="container" id="line-graph">
-  <h5><strong>Explore the average price by quadrant. Click on the quadrant labels to exclude them from the chart.</strong></h5>
-  <canvas baseChart width="400" height="400"
+  <h5><strong>Explore the average price by quadrant.<br><span class="clickColor">Click</span> on the labels in the legend below to exclude them from the chart.</strong></h5><br>
+  <canvas id="fontLegend" baseChart width="400" height="400"
               [datasets]="lineChartData"
               [labels]="lineChartLabels"
               [options]="lineChartOptions"
@@ -20,6 +20,7 @@
                     [data]="doughnutChartData"
                     [colors]="doughnutChartColors"
                     [labels]="doughnutChartLabels"
+                    [options]="doughnutChartOptions"
                     [chartType]="doughnutChartType"
                     (chartHover)="chartHovered($event)"
                     (chartClick)="chartClicked($event)"></canvas>

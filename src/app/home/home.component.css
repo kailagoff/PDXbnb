@@ -1,9 +1,9 @@
-#jumbotron1{
+/*#jumbotron1{
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   font-family: 'Dosis', sans-serif;
-}
+}*/
 
 h2 {
   Font-Family: 'Droid Serif', Serif;
@@ -39,4 +39,12 @@ h5 span {
 
 .btn {
   border-radius: 17px;
+}
+
+.textColor {
+  color: deeppink;
+}
+
+.full-bg-img, .jumbotron {
+  background: -webkit-linear-gradient(top, #1e5799 0%,#000000 0%,#000000 0%,#000000 0%,#000000 0%,#000000 0%,#ffffff 100%);
 }

@@ -24,22 +24,50 @@ export class ChartComponent implements OnInit {
   }
   // Doughnut
   public doughnutChartLabels:string[] = ['Entire Home/Apt', 'Private Room', 'Shared Room'];
+
   public doughnutChartData:number[] = [129, 64, 41];
   public doughnutChartType:string = 'doughnut';
   public doughnutChartColors: Array<any> = [
     {
       backgroundColor:["#B8E0D2", "#95B8D1", "#809BCE"]
     }];
+  public doughnutChartOptions:any = {
+    responsive: true,
+      legend: {
+        labels: {fontSize: 15}
+      }
+  }
 
   // events
   public chartClicked(e:any):void { }
 
   public chartHovered(e:any):void { }
+
   // se bar chart
   public barChartOptions:any = {
     scaleShowVerticalLines: false,
-    responsive: true
-  };
+    responsive: true,
+      legend: {
+        labels: {fontSize: 15}
+      },
+      scales:
+      {
+        yAxes:
+        [{
+          ticks:
+          {
+            fontSize: 14,
+            callback: function(value, index, values) {
+            return '$' + value;
+            }
+          }
+        }],
+        xAxes:
+        [{
+          ticks: { fontSize: 14 }
+        }]
+      }
+    };
   public barChartLabels:string[] = ['Brooklyn', 'Buckman', 'Hosford', 'Kerns', 'Mt. Tabor'];
   public barChartType:string = 'bar';
 
@@ -54,8 +82,28 @@ export class ChartComponent implements OnInit {
   //ne bar chart
   public neBarChartOptions:any = {
     scaleShowVerticalLines: false,
-    responsive: true
-  };
+    responsive: true,
+      legend: {
+        labels: {fontSize: 15}
+      },
+      scales:
+      {
+        yAxes:
+        [{
+          ticks:
+          {
+            fontSize: 14,
+            callback: function(value, index, values) {
+            return '$' + value;
+            }
+          }
+        }],
+        xAxes:
+        [{
+          ticks: { fontSize: 14 }
+        }]
+      }
+    };
   public neBarChartLabels:string[] = ['Cully', 'Eliot', 'Irvington', 'Lloyd', 'Roseway', 'Woodlawn'];
   public neBarChartType:string = 'bar';
 
@@ -71,8 +119,28 @@ export class ChartComponent implements OnInit {
   //nportland bar chart
   public nBarChartOptions:any = {
     scaleShowVerticalLines: false,
-    responsive: true
-  };
+    responsive: true,
+      legend: {
+        labels: {fontSize: 15}
+      },
+      scales:
+      {
+        yAxes:
+        [{
+          ticks:
+          {
+            fontSize: 14,
+            callback: function(value, index, values) {
+            return '$' + value;
+            }
+          }
+        }],
+        xAxes:
+        [{
+          ticks: { fontSize: 14 }
+        }]
+      }
+    };
   public nBarChartLabels:string[] = ['Arbor Lodge', 'Cathederal Park', 'Kenton', 'Overlook', 'St. Johns'];
   public nBarChartType:string = 'bar';
 
@@ -88,8 +156,28 @@ export class ChartComponent implements OnInit {
   //sw portland bar chart
   public swBarChartOptions:any = {
     scaleShowVerticalLines: false,
-    responsive: true
-  };
+    responsive: true,
+      legend: {
+        labels: {fontSize: 15}
+      },
+      scales:
+      {
+        yAxes:
+        [{
+          ticks:
+          {
+            fontSize: 14,
+            callback: function(value, index, values) {
+            return '$' + value;
+            }
+          }
+        }],
+        xAxes:
+        [{
+          ticks: { fontSize: 14 }
+        }]
+      }
+    };
   public swBarChartLabels:string[] = ['Downtown', 'Hayhurst', 'Hillsdale', 'Homestead', 'Maplewood-Ashcreek'];
   public swBarChartType:string = 'bar';
 
@@ -105,8 +193,28 @@ export class ChartComponent implements OnInit {
   //nw portland bar chart
   public nwBarChartOptions:any = {
     scaleShowVerticalLines: false,
-    responsive: true
-  };
+    responsive: true,
+      legend: {
+        labels: {fontSize: 15}
+      },
+      scales:
+      {
+        yAxes:
+        [{
+          ticks:
+          {
+            fontSize: 14,
+            callback: function(value, index, values) {
+            return '$' + value;
+            }
+          }
+        }],
+        xAxes:
+        [{
+          ticks: { fontSize: 14 }
+        }]
+      }
+    };
   public nwBarChartLabels:string[] = ['Forest Park', 'Linnton', 'Northwest', 'Old Town-Chinatown', 'Pearl District'];
   public nwBarChartType:string = 'bar';
 
@@ -129,8 +237,29 @@ export class ChartComponent implements OnInit {
     {data: [98, 101, 107, 104, 98, 89, 85, 86, 87, 87, 92, 90], label: 'Northeast', borderColor:["rgba(255, 119, 0, 1)"], backgroundColor:["rgba(255, 119, 0, .1)"]}
   ];
   public lineChartLabels:Array<any> = ['July 2016', 'Aug. 2016', 'Sept. 2016', 'Oct. 2016', 'Nov. 2016', 'Jan. 2017', 'Feb. 2017', 'March 2017', 'April 2017', 'May 2017', 'June 2017', 'July 2017'];
-  public lineChartOptions:any = {
-    responsive: true
+  public lineChartOptions:any =
+  {
+    responsive: true,
+    legend: {
+      labels: {fontSize: 20}
+    },
+    scales:
+    {
+      yAxes:
+      [{
+        ticks:
+        {
+          fontSize: 14,
+          callback: function(value, index, values) {
+          return '$' + value;
+          }
+        }
+      }],
+      xAxes:
+      [{
+        ticks: { fontSize: 14 }
+      }]
+    }
   };
   public lineChartColors:Array<any> = ["#0095818D", "#00A1869E"];
   public lineChartLegend:boolean = true;
