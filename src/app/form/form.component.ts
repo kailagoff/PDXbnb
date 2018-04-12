@@ -29,7 +29,7 @@ export class FormComponent implements OnInit {
     })
   }
 
-  submitFormOne(budget, month) {
+  submitForm(budget, month, room) {
     let num = 0;
     if (budget === "") {
       this.show = false;
@@ -65,11 +65,11 @@ export class FormComponent implements OnInit {
         this.error = 'There was an error with the search';
       }
     }
-    this.sortByFormData(num, budget);
+    this.sortByFormData(num, budget, room);
     this.show = true;
   }
 
-  sortByFormData(num, budget) {
+  sortByFormData(num, budget, room) {
     let month = this.hoodToDisplay[num];
 
     let arrNH = Object.entries(month).map(entry => Object.assign({value: entry[1]}, { key: entry[0] }));
@@ -78,7 +78,14 @@ export class FormComponent implements OnInit {
       let arrRT = Object.entries(arrNH[j].value).map(entry => Object.assign({value: entry[1]}, { key: entry[0] }));
       for (var l = 0; l < arrRT.length; l++) {
         if((arrRT[l].value.avgPrice <= budget) && (arrRT[l].key !== 'Total')) {
-          this.result.push([arrNH[j].key, arrRT[l].key, arrRT[l].value.avgPrice]);
+          if (room !== "All"){
+            if(arrRT[l].key === room) {
+              this.result.push([arrNH[j].key, arrRT[l].key, arrRT[l].value.avgPrice]);
+            }
+          }
+          else {
+            this.result.push([arrNH[j].key, arrRT[l].key, arrRT[l].value.avgPrice]);
+          }
         }
       }
     }

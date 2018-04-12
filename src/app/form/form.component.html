@@ -12,8 +12,8 @@
               <input #newBudget type="number" placeholder="$" class="form-control">
             </div>
           </div>
-          <div class="col" id="select">
-            <label id="selectLabel" for="">Select a month:</label>
+          <div class="col select">
+            <label class="selectLabel" for="">Select a month:</label>
             <div class="md-form mt-0">
               <select class="form-control" #newMonth>
                 <option>January</option>
@@ -30,8 +30,17 @@
               </select>
             </div>
           </div>
+          <div class="col select">
+            <label class="selectLabel" for="">Select room type:</label>
+            <select class="form-control" #newRoom>
+              <option>All</option>
+              <option>Entire home-apt</option>
+              <option>Private room</option>
+              <option>Shared room</option>
+            </select>
+          </div>
         </div>
-          <button (click)="submitFormOne(newBudget.value, newMonth.value); newBudget.value='';"  class="btn btn-pink" >Submit</button>
+        <button (click)="submitForm(newBudget.value, newMonth.value, newRoom.value); newBudget.value='';"  class="btn btn-pink" >Submit</button>
       </form>
     </div>
   </div>
