@@ -1,30 +1,21 @@
 <nav class="navbar navbar-expand-lg navbar-dark black">
   <div class="container">
-    <p class="navbar-brand"><strong>PDXbnb</strong></p>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-    </button>
+    </button> -->
+    <p><a class="navbar-brand" routerLink=""><strong>PDXbnb</strong></a></p>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto left">
-        <li class="nav-item">
+        <!-- <li class="nav-item">
             <a class="nav-link" routerLink="">Home</a>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="high-level-data">View Rates</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" routerLink="high-level-data">View Rates</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" routerLink="search-data">Search Rates</a>
+          <a class="nav-link" routerLink="search-data">Search Rates</a>
         </li>
       </ul>
-      <!-- <ul class="nav navbar-nav navbar-right">
-        <li *ngIf="isLoggedIn">
-          <a>{{userName}}</a>
-          <a (click)="logout()">Log out</a>
-        </li>
-        <li *ngIf ="!isLoggedIn">
-          <a (click)="login()">Log in</a>
-        </li>
-      </ul> -->
     </div>
   </div>
 </nav>

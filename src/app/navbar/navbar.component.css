@@ -8,8 +8,10 @@
     margin-top: -56px;
   }
 }
+
 .navbar {
   z-index: 1;
+  height: 150px !important;
 }
 
 .container {
@@ -32,9 +34,14 @@ h4 {
 
 a {
   color: whitesmoke !important;
+  font-size: 1.5em;
 }
 
 a:hover {
   color: deeppink !important;
   text-decoration: none;
 }
+
+.navbar-brand {
+  font-size: 3em;
+ }
