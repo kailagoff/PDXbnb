@@ -22,5 +22,6 @@ label {
 }
 
 .underline {
-  border-bottom: 2px;
+  border-bottom: 2px solid black;
+  margin-bottom: 7px;
 }
