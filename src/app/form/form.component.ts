@@ -18,6 +18,7 @@ export class FormComponent implements OnInit {
   hoodToDisplay;
   error = "";
   result = [];
+  show: boolean = false;
 
   constructor(private router: Router, private dataService: DataService) { }
 
@@ -29,69 +30,56 @@ export class FormComponent implements OnInit {
   }
 
   submitFormOne(budget, month) {
+    let num = 0;
     if (budget === "") {
+      this.show = false;
       this.error = "Please enter valid number for search";
     } else {
       this.result = [];
       this.error = '';
       budget = parseInt(budget);
       if (month == 'January') {
-        let month =[];
-        month = this.hoodToDisplay[5];
-        //mapping the
-        let arrNH = Object.entries(month).map(entry => Object.assign({value: entry[1]}, { key: entry[0] }));
+        num = 5;
+      } else if (month == 'February') {
+        num = 6;
+      } else if (month == 'March') {
+        num = 7;
+      } else if (month == 'April') {
+        num = 8;
+      } else if (month == 'May') {
+        num = 9;
+      } else if (month == 'June') {
+        num = 10;
+      } else if (month == 'July') {
+        num = 11;
+      } else if (month == 'August') {
+        num = 1;
+      } else if (month == 'September') {
+        num = 2;
+      } else if (month == 'October') {
+        num = 3;
+      } else if (month == 'November') {
+        num = 4;
+      } else {
+        this.show = false;
+        this.error = 'There was an error with the search';
+      }
+    }
+    this.sortByFormData(num, budget);
+    this.show = true;
+  }
 
-        for(var j = 0; j < arrNH.length; j++) {
-          let arrRT = Object.entries(arrNH[j].value).map(entry => Object.assign({value: entry[1]}, { key: entry[0] }));
-          for (var l = 0; l < arrRT.length; l++) {
-            if((arrRT[l].value.avgPrice <= budget) && (arrRT[l].key !== 'Total')) {
-              this.result.push([arrNH[j].key, arrRT[l].key, arrRT[l].value.avgPrice]);
-              console.log(arrRT[l].value.avgPrice);
-            }
-          }
+  sortByFormData(num, budget) {
+    let month = this.hoodToDisplay[num];
+
+    let arrNH = Object.entries(month).map(entry => Object.assign({value: entry[1]}, { key: entry[0] }));
+
+    for(var j = 0; j < arrNH.length; j++) {
+      let arrRT = Object.entries(arrNH[j].value).map(entry => Object.assign({value: entry[1]}, { key: entry[0] }));
+      for (var l = 0; l < arrRT.length; l++) {
+        if((arrRT[l].value.avgPrice <= budget) && (arrRT[l].key !== 'Total')) {
+          this.result.push([arrNH[j].key, arrRT[l].key, arrRT[l].value.avgPrice]);
         }
-
-        console.log(this.result);
-      }
-      if (month == 'February') {
-        this.result = this.hoodToDisplay[6].Alameda.Total.avgPrice;
-        console.log(budget);
-      }
-      if (month == 'March') {
-        this.result = this.hoodToDisplay[7].Alameda.Total.avgPrice;
-        console.log(budget);
-      }
-      if (month == 'April') {
-        this.result = this.hoodToDisplay[8].Alameda.Total.avgPrice;
-        console.log(budget);
-      }
-      if (month == 'May') {
-        this.result = this.hoodToDisplay[9].Alameda.Total.avgPrice;
-        console.log(budget);
-      }
-      if (month == 'June') {
-        this.result = this.hoodToDisplay[10].Alameda.Total.avgPrice;
-        console.log(budget);
-      }
-      if (month == 'July') {
-        this.result = this.hoodToDisplay[0].Alameda.Total.avgPrice;
-        console.log(budget);
-      }
-      if (month == 'August') {
-        this.result = this.hoodToDisplay[1].Alameda.Total.avgPrice;
-        console.log(budget);
-      }
-      if (month == 'September') {
-        this.result = this.hoodToDisplay[2].Alameda.Total.avgPrice;
-        console.log(budget);
-      }
-      if (month == 'October') {
-        this.result = this.hoodToDisplay[3].Alameda.Total.avgPrice;
-        console.log(budget);
-      }
-      if (month == 'November') {
-        this.result = this.hoodToDisplay[4].Alameda.Total.avgPrice;
-        console.log(budget);
       }
     }
   }

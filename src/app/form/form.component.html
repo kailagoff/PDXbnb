@@ -1,7 +1,7 @@
-<div class="container">
-  <h1>Form</h1>
+<div class="container margin">
+  <h1>Search</h1>
+  <label><i>We lack data from the month of December, hence why it is missing from the drop down menu.</i></label>
   <div class="panel panel-default">
-    </div>
     <div class="panel-body">
       <form>
         <div class="row">
@@ -12,7 +12,6 @@
               <input #newBudget type="number" placeholder="$" class="form-control">
             </div>
           </div>
-
           <div class="col" id="select">
             <label id="selectLabel" for="">Select a month:</label>
             <div class="md-form mt-0">
@@ -32,30 +31,45 @@
             </div>
           </div>
         </div>
-        <p>We are currently lacking data for the month of December, hence why it is missing from the menu. :)</p>
-          <br>
           <button (click)="submitFormOne(newBudget.value, newMonth.value); newBudget.value='';"  class="btn btn-pink" >Submit</button>
       </form>
     </div>
   </div>
+</div>
 
-  <div class="container">
-    <div *ngIf="error !== ''" class="panel panel-default">
-      <div class="panel-body">
-        <p>{{error}}</p>
-      </div>
+<div class="container text-center margin">
+  <div *ngIf="error !== ''" class="panel panel-default">
+    <div class="panel-body">
+      <p>{{error}}</p>
     </div>
-      <div *ngIf="result !== null" class="panel panel-default panel-body">
-        <div *ngFor="let data of result" class="row">
-          <div class="col">
-            <p>{{data[0]}}</p>
-          </div>
-          <div class="col">
-            <p>{{data[1]}}</p>
-          </div>
-          <div class="col">
-            <p>{{data[2]}}</p>
-          </div>
+  </div>
+  <div *ngIf="(show == true) && (error == '')" class="panel panel-default panel-body">
+    <div *ngIf="result.length == 0">
+      <h3>Your search returned zero results.</h3>
+    </div>
+    <div *ngIf="result.length > 0">
+      <div class="row">
+        <div class="col">
+          <h3>Neighborhoods</h3>
+        </div>
+        <div class="col">
+          <h3>Room Type</h3>
+        </div>
+        <div class="col">
+          <h3>Price/Night</h3>
         </div>
       </div>
+      <div *ngFor="let data of result" class="row">
+        <div class="col">
+          <p>{{data[0]}}</p>
+        </div>
+        <div class="col">
+          <p>{{data[1]}}</p>
+        </div>
+        <div class="col">
+          <p>${{data[2]}}</p>
+        </div>
+      </div>
+    </div>
   </div>
+</div>
