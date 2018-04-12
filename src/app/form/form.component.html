@@ -40,13 +40,22 @@
   </div>
 
   <div class="container">
-    <p>Data Info</p>
     <div *ngIf="error !== ''" class="panel panel-default">
       <div class="panel-body">
         <p>{{error}}</p>
       </div>
     </div>
       <div *ngIf="result !== null" class="panel panel-default panel-body">
-        <p>{{result}}</p>
+        <div *ngFor="let data of result" class="row">
+          <div class="col">
+            <p>{{data[0]}}</p>
+          </div>
+          <div class="col">
+            <p>{{data[1]}}</p>
+          </div>
+          <div class="col">
+            <p>{{data[2]}}</p>
+          </div>
+        </div>
       </div>
   </div>

@@ -36,3 +36,7 @@ h5 span {
 #homeCards {
   margin: 10
 }
+
+.btn {
+  border-radius: 17px;
+}
