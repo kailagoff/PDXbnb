@@ -121,17 +121,18 @@ export class ChartComponent implements OnInit {
 
   //price by quadrant
   public lineChartData:Array<any> = [
-    {data: [86, 92, 91, 91, 91, 90, 82, 86, 90, 90, 90, 95], label: 'North'},
-    {data: [130, 130, 127, 130, 127, 115, 114, 109, 112, 114, 133, 121], label: 'Northwest'},
-    {data: [104, 104, 106, 122, 124, 100, 95, 96, 107, 111, 109, 114], label: 'Southwest'},
-    {data: [96, 96, 92, 90, 96, 89, 88, 89, 93, 95, 96, 97], label: 'Southeast'},
-    {data: [98, 101, 107, 104, 98, 89, 85, 86, 87, 87, 92, 90], label: 'Northeast'}
+    //North
+    {data: [86, 92, 91, 91, 91, 90, 82, 86, 90, 90, 90, 95], label: 'North', backgroundColor:["rgba(249, 74, 74, .1)"], borderColor:["rgba(249, 74, 74, 1)"]},
+    {data: [130, 130, 127, 130, 127, 115, 114, 109, 112, 114, 133, 121], label: 'Northwest',  borderColor:["rgba(18, 181, 58, 1)"], backgroundColor:["rgba(18, 181, 58, .1)"]},
+    {data: [104, 104, 106, 122, 124, 100, 95, 96, 107, 111, 109, 114], label: 'Southwest', borderColor:["rgba(44, 156, 232, 1)"], backgroundColor:["rgb(44, 156, 232, .1)"]},
+    {data: [96, 96, 92, 90, 96, 89, 88, 89, 93, 95, 96, 97], label: 'Southeast', borderColor:["rgba(176, 111, 183, 1)"], backgroundColor:["rgba(176, 111, 183, .1)"]},
+    {data: [98, 101, 107, 104, 98, 89, 85, 86, 87, 87, 92, 90], label: 'Northeast', borderColor:["rgba(255, 119, 0, 1)"], backgroundColor:["rgba(255, 119, 0, .1)"]}
   ];
   public lineChartLabels:Array<any> = ['July 2016', 'Aug. 2016', 'Sept. 2016', 'Oct. 2016', 'Nov. 2016', 'Jan. 2017', 'Feb. 2017', 'March 2017', 'April 2017', 'May 2017', 'June 2017', 'July 2017'];
   public lineChartOptions:any = {
     responsive: true
   };
-  public lineChartColors:Array<any> = [];
+  public lineChartColors:Array<any> = ["#0095818D", "#00A1869E"];
   public lineChartLegend:boolean = true;
   public lineChartType:string = 'line';
 }
